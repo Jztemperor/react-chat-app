@@ -20,4 +20,14 @@ const io = new Server(server, {
 // Listen for connection event
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
+
+  //Join room event
+  socket.on("join_room", (data) => {
+    socket.join(data);
+    console.log(`User: ${data.name} joined room: ${data.room}`);
+  });
+});
+
+server.listen(3001, () => {
+  console.log("Server running...");
 });
