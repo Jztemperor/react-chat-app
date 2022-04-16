@@ -1,0 +1,14 @@
+.msg_cont {
+  background-color: #404450;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}

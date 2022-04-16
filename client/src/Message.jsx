@@ -1,10 +1,16 @@
-import React from "react";
+import { Fragment } from "react";
+import styles from "./Message.module.css";
 
-function Message({ author, message }) {
+function Message({ author, message, name }) {
   return (
-    <div>
-      <p>Author: {author}</p>
-      <p>Message: {message}</p>
+    <div className={styles.msg_cont}>
+      {" "}
+      <div className={name === author ? styles.right : styles.left}>
+        <span>Author: {author}</span>
+      </div>
+      <div className={name === author ? styles.right : styles.left}>
+        {message}
+      </div>
     </div>
   );
 }

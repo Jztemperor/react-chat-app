@@ -47,6 +47,7 @@ function Chat() {
             <Message
               author={message.user}
               message={message.msg}
+              name={name}
               key={uuid()}
             ></Message>
           ))}
