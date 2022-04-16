@@ -23,8 +23,18 @@ io.on("connection", (socket) => {
 
   //Join room event
   socket.on("join_room", (data) => {
-    socket.join(data);
+    socket.join(data.room);
     console.log(`User: ${data.name} joined room: ${data.room}`);
+  });
+
+  // Send message event
+  socket.on("send_message", (data) => {
+    socket.to(data.room).emit("recieve_message", data);
+  });
+
+  // Disconnect event
+  socket.on("disconnect", () => {
+    console.log(`User disconnected, id: ${socket.id}`);
   });
 });
 
