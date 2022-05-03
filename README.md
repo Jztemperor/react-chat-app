@@ -1,9 +1,8 @@
 # react-chat-app
 
 ## Short description
-```
+
 ChatRoom appliaction built with React, Socket.io and Nodejs
-```
 
 ## How to use
 In project root directory:
