@@ -27,12 +27,9 @@ function Chat() {
     }
   };
 
-  console.log(socket);
-
   useEffect(() => {
     socket.on("recieve_message", (data) => {
       setMessages((msgs) => [...msgs, data]);
-      console.log("Cső");
     });
   }, [socket]);
 
